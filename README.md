@@ -49,6 +49,7 @@ Here I present three comparisons, the predictions in the left image are from the
 ## Overfitting Example: 
 Model 1 overfits, recognizing only smaller patterns.
 Model 2: Successfully identifies two large clusters of open and close corals.
+
 ![image](./results/Compare_1.png)
 
 ## Mixed Coral Sizes: 
