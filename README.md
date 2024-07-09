@@ -39,6 +39,29 @@ For the other two, the results are ok.
 ![image](./results/demo4-corallium-rubrum-demo4-corallium-rubrum-ambiance-corail.jpg)
 
 
+# Training model on different size of bounding boxes
+
+The model presented before was trained on the images obtained from a time-lapse of a coral. Hence, there is less diversity in the data. Additionally, I had the boxes fit very tight and small to cover individual branches of the corals.
+I trained the model by changing the bounding boxes as well as adding ~20 images with different size and angle of the corals. However limited, this yielded in some insights into the influence of data annotation on the predictions.
+
+Here I present three comparisons, the predictions in the left image are from the first model trained on comparatively small and tight bounding boxes, where as the predictions on the right are from the second model which was trained on bounding boxes that were bigger and encompassed the whole coral rather than individual branches.
+
+## Overfitting Example: 
+Model 1 overfits, recognizing only smaller patterns.
+Model 2: Successfully identifies two large clusters of open and close corals.
+![image](./results/Compare_1.png)
+
+## Mixed Coral Sizes: 
+Both models identify various features.
+Model 1 Limitation: Fails to label the large coral with open polyps.
+
+![image](./results/Compare_2.png)
+
+## Overfitting with Large Boxes: 
+Model 2 labels almost the entire image as open, likely due to how it perceives bounding boxes in training data.
+
+![image](./results/Compare_3.png)
+
 ## Net Steps
 
 - Train the model for longer
